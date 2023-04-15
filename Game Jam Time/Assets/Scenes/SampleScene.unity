@@ -1613,7 +1613,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 67.1
+      scalar: 8.81
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -2130,7 +2130,7 @@ ParticleSystem:
         key0: {r: 0.9699506, g: 1, b: 0.72075474, a: 0}
         key1: {r: 1, g: 0.9847362, b: 0.645283, a: 0.011764706}
         key2: {r: 1, g: 1, b: 1, a: 0.011764706}
-        key3: {r: 0, g: 0, b: 0, a: 0}
+        key3: {r: 0, g: 0, b: 0, a: 0.011764706}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
@@ -2144,16 +2144,16 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 5590
-        atime2: 54741
-        atime3: 65535
-        atime4: 0
+        atime1: 2313
+        atime2: 30647
+        atime3: 63222
+        atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 4
+        m_NumAlphaKeys: 5
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5664,7 +5664,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197458204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 5.4, y: 4.8, z: -0.86}
+=======
+  m_LocalPosition: {x: 6.44, y: 6.46, z: -0.86}
+>>>>>>> Stashed changes
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
