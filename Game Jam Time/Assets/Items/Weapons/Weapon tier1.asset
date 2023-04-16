@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon tier1
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  prefab: {fileID: 6013661246299726458, guid: 4a6551b00baec6f41bebae0f5162c0db, type: 3}
+  prefab: {fileID: 5617386202402400354, guid: 5820388c95c08674e8038d20e1eaeb9b, type: 3}
   type: 1
   description: This is weapon tier 1.
   damage: 1
