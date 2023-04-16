@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 290.4
     height: 455.2
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -223,10 +223,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 50.799988}
+      scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d2acfeffa0aefeff0ec2feffa014ffff5c1bfffff41dffff16fbffffe25b00000c5c00001a5c00002a5c00008e5c000040750000
+      m_ExpandedIDs: 8c26feff2e2bfeff822bfeffe22efeffd2acfeffa0aefeff0ec2feffa014ffff5c1bfffff41dffff16fbffffe25b00000c5c00001a5c00002a5c00008e5c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 882.4
     height: 455.2
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 8}
@@ -536,9 +536,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.0079763, y: 5.03532, z: -2.4042115}
+    m_Target: {x: -3.2865798, y: 7.857329, z: -12.66372}
     speed: 2
-    m_Value: {x: -2.0079763, y: 5.03532, z: -2.4042115}
+    m_Value: {x: -3.2865798, y: 7.857329, z: -12.66372}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -585,9 +585,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.13044426, y: -0.0023952674, z: 0.00021892549, w: -0.9915114}
+    m_Target: {x: -0.15805952, y: -0.15865362, z: 0.025649184, w: -0.9743261}
     speed: 2
-    m_Value: {x: -0.13043685, y: -0.0009079453, z: 0.00002325756, w: -0.9914562}
+    m_Value: {x: -0.1580498, y: -0.15864386, z: 0.025647607, w: -0.9742662}
   m_Size:
     m_Target: 0.0065453467
     speed: 2
@@ -926,8 +926,8 @@ MonoBehaviour:
     y: 0
     width: 363.19995
     height: 770.8
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
