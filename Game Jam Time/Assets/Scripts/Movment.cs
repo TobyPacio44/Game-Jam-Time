@@ -19,6 +19,8 @@ public class Movment : MonoBehaviour
     private float raycastDistance = 0.3f;
     private bool isGrounded;
 
+    public Animator Legs;
+    public ParticleSystem JumpInpact;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -31,12 +33,15 @@ public class Movment : MonoBehaviour
         {
             isGrounded = false;
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            Legs.Play("Jump",0,0.0f);
+            JumpInpact.Play();
         }
     }
 
     void FixedUpdate()
     {
         speed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : normalSpeed;
+        Legs.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
       
@@ -53,6 +58,12 @@ public class Movment : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.LookRotation(movement);
             meshTransform.rotation = Quaternion.Slerp(meshTransform.rotation, targetRotation, Time.deltaTime * 10f);
+            Legs.SetBool("Walk", true);
+            
+        }
+        else
+        {
+            Legs.SetBool("Walk", false);
         }
     }
 }
