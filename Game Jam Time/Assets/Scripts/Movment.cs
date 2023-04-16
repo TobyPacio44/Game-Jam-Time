@@ -16,8 +16,8 @@ public class Movment : MonoBehaviour
     private Rigidbody rb;
 
     public LayerMask whatIsGround;
-    private float raycastDistance = 1.1f;
-    public bool isGrounded;
+    private float raycastDistance = 0.3f;
+    private bool isGrounded;
 
     void Start()
     {
@@ -29,6 +29,7 @@ public class Movment : MonoBehaviour
         isGrounded = Physics.SphereCast(groundCheck.transform.position, 0.25f, Vector3.down, out RaycastHit hit, raycastDistance, whatIsGround);
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            isGrounded = false;
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
