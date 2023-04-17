@@ -10,12 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28bcaa132ec20364fb0cf87b2adc7968, type: 3}
-  m_Name: Inventory
+  m_Name: FoodInventory
   m_EditorClassIdentifier: 
-  Container:
-  - item: {fileID: 11400000, guid: a973954cd9f959747b6005c76d901d4e, type: 2}
-    amount: 1
-  - item: {fileID: 11400000, guid: 6f1260540ce43e84795be88a089697dd, type: 2}
-    amount: 1
-  - item: {fileID: 11400000, guid: 5e06d4bec48f7354bbb207bc5d95be30, type: 2}
-    amount: 1
+  Container: []

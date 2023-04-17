@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class Hands : MonoBehaviour
 {
+    //Weapon
+    public GameObject heldItem;
+    public float PunchForce;
+
+    //AttackRange
     public Collider AttackRange;
     public List<Collider> AtackRange = new List<Collider>();
 
+    //Animations
     public Animator handsAnim;
     public Animator Legs;
-    public Movment movment;
-    public float PuchForece;
 
     public void Update()
     {
-
         handsAnim.SetBool("Walk", Legs.GetBool("Walk"));
         handsAnim.SetBool("Run", Legs.GetBool("Run"));
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -36,7 +39,7 @@ public class Hands : MonoBehaviour
             {
                 Vector3 forceDirection = collider.transform.position - AttackRange.transform.position;
                 forceDirection.Normalize();
-                hitRigidbody.AddForce(forceDirection * PuchForece, ForceMode.Impulse);
+                hitRigidbody.AddForce(forceDirection * PunchForce, ForceMode.Impulse);
             }
         }
     }

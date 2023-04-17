@@ -5,24 +5,25 @@ using UnityEngine;
 
 public class Movment : MonoBehaviour
 {
-    public float speed;
-    public float normalSpeed;
-    public float sprintSpeed;
-    public float jumpForce;
+    [HideInInspector] public float speed;
+    [HideInInspector] public float normalSpeed;
+    [HideInInspector] public float sprintSpeed;
+    [HideInInspector] public float jumpForce;
 
-    public Transform orientation;
-    public Transform meshTransform;
-    public GameObject groundCheck;
+    [HideInInspector] public Transform orientation;
+    [HideInInspector] public GameObject groundCheck;
     private Rigidbody rb;
 
     public LayerMask whatIsGround;
     private float raycastDistance = 0.3f;
     private bool isGrounded;
 
-    public Animator Legs;
+    public Animator LegsAnimator;
     public ParticleSystem JumpInpact;
     void Start()
     {
+        orientation = transform.Find("Mesh");
+        groundCheck = transform.Find("GroundCheck").gameObject;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -33,7 +34,7 @@ public class Movment : MonoBehaviour
         {
             isGrounded = false;
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            Legs.Play("Jump",0,0.0f);
+            LegsAnimator.Play("Jump",0,0.0f);
             JumpInpact.Play();
         }
     }
@@ -41,7 +42,7 @@ public class Movment : MonoBehaviour
     void FixedUpdate()
     {
         speed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : normalSpeed;
-        Legs.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
+        LegsAnimator.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
       
@@ -57,13 +58,13 @@ public class Movment : MonoBehaviour
         if (movement.magnitude > 0f)
         {
             Quaternion targetRotation = Quaternion.LookRotation(movement);
-            meshTransform.rotation = Quaternion.Slerp(meshTransform.rotation, targetRotation, Time.deltaTime * 10f);
-            Legs.SetBool("Walk", true);
+            orientation.rotation = Quaternion.Slerp(orientation.rotation, targetRotation, Time.deltaTime * 10f);
+            LegsAnimator.SetBool("Walk", true);
             
         }
         else
         {
-            Legs.SetBool("Walk", false);
+            LegsAnimator.SetBool("Walk", false);
         }
     }
 }
