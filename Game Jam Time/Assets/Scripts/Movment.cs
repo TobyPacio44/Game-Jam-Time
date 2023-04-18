@@ -17,6 +17,7 @@ public class Movment : MonoBehaviour
     public CapsuleCollider capsuleCollider;
     public Vector3 center;
     public DetectUp crouchingDetect;
+    public GameObject Mesh;
 
     public LayerMask whatIsGround;
     private float raycastDistance = 0.3f;
@@ -46,10 +47,11 @@ public class Movment : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl))
         {
             center = capsuleCollider.center;
-            center.y = -0.6f;
+            center.y = -0.46f;
             capsuleCollider.center = center;
-            capsuleCollider.height = 1.483908f;
+            capsuleCollider.height = 1.789756f;
             crouching = true;
+            Mesh.transform.localPosition = new Vector3(0, -4.50f, 0);
         }
         else if(!crouchingDetect.isColliding)
         {
@@ -57,6 +59,7 @@ public class Movment : MonoBehaviour
             capsuleCollider.center = center;
             capsuleCollider.height = 2.514893f;
             crouching = false;
+            Mesh.transform.localPosition = new Vector3(0, 0, 0);
         }
     }
 
