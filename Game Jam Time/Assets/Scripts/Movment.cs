@@ -14,14 +14,19 @@ public class Movment : MonoBehaviour
     [HideInInspector] public GameObject groundCheck;
     private Rigidbody rb;
 
+    public CapsuleCollider capsuleCollider;
+    public Vector3 center;
+    public DetectUp crouchingDetect;
+
     public LayerMask whatIsGround;
     private float raycastDistance = 0.3f;
-    private bool isGrounded;
+    private bool isGrounded, crouching;
 
     public Animator LegsAnimator;
     public ParticleSystem JumpInpact;
     void Start()
     {
+        capsuleCollider =  GetComponent<CapsuleCollider>();
         orientation = transform.Find("Mesh");
         groundCheck = transform.Find("GroundCheck").gameObject;
         rb = GetComponent<Rigidbody>();
@@ -37,11 +42,27 @@ public class Movment : MonoBehaviour
             LegsAnimator.Play("Jump",0,0.0f);
             JumpInpact.Play();
         }
+
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            center = capsuleCollider.center;
+            center.y = -0.6f;
+            capsuleCollider.center = center;
+            capsuleCollider.height = 1.483908f;
+            crouching = true;
+        }
+        else if(!crouchingDetect.isColliding)
+        {
+            center.y = -0.0974462f;
+            capsuleCollider.center = center;
+            capsuleCollider.height = 2.514893f;
+            crouching = false;
+        }
     }
 
     void FixedUpdate()
     {
-        speed = Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : normalSpeed;
+        speed = (Input.GetKey(KeyCode.LeftShift) && !crouching) ? sprintSpeed : normalSpeed;
         LegsAnimator.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
