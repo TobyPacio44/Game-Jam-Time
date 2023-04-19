@@ -21,7 +21,9 @@ public class Movment : MonoBehaviour
 
     public LayerMask whatIsGround;
     private float raycastDistance = 0.3f;
-    private bool isGrounded, crouching;
+    private bool isGrounded;
+    public float CrouchDistance;
+    public bool crouching;
 
     public Animator LegsAnimator;
     public ParticleSystem JumpInpact;
@@ -51,7 +53,8 @@ public class Movment : MonoBehaviour
             capsuleCollider.center = center;
             capsuleCollider.height = 1.789756f;
             crouching = true;
-            Mesh.transform.localPosition = new Vector3(0, -4.50f, 0);
+            Mesh.transform.localPosition = new Vector3(0, CrouchDistance, 0);
+            
         }
         else if(!crouchingDetect.isColliding)
         {
@@ -67,6 +70,7 @@ public class Movment : MonoBehaviour
     {
         speed = (Input.GetKey(KeyCode.LeftShift) && !crouching) ? sprintSpeed : normalSpeed;
         LegsAnimator.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
+        LegsAnimator.SetBool("Kuc", crouching);
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
       

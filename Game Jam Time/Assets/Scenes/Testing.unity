@@ -8487,7 +8487,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148667427243}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -4.5, z: 0}
   m_LocalScale: {x: 3.1292844, y: 3.1292844, z: 3.1292844}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8787,6 +8787,8 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  CrouchDistance: -4.5
+  crouching: 0
   LegsAnimator: {fileID: 645628402}
   JumpInpact: {fileID: 2878781954076951565}
 --- !u!136 &1751525830832710137
