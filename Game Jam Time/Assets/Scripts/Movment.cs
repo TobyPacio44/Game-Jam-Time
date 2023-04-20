@@ -8,6 +8,8 @@ public class Movment : MonoBehaviour
     [HideInInspector] public float speed;
     [HideInInspector] public float normalSpeed;
     [HideInInspector] public float sprintSpeed;
+    [HideInInspector] public float crouchSpeed;
+
     [HideInInspector] public float jumpForce;
 
     [HideInInspector] public Transform orientation;
@@ -68,7 +70,7 @@ public class Movment : MonoBehaviour
 
     void FixedUpdate()
     {
-        speed = (Input.GetKey(KeyCode.LeftShift) && !crouching) ? sprintSpeed : normalSpeed;
+        speed = (Input.GetKey(KeyCode.LeftShift) && !crouching) ? sprintSpeed : crouching ? crouchSpeed : normalSpeed;
         LegsAnimator.SetBool("Run", Input.GetKey(KeyCode.LeftShift));
         LegsAnimator.SetBool("Kuc", crouching);
         float x = Input.GetAxis("Horizontal");

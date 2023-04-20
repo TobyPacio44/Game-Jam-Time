@@ -110,4 +110,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d0db8504260be42a7a6f5fcff2a34a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: a973954cd9f959747b6005c76d901d4e, type: 2}
+  GrabEvent: 0
+  grabUI: {fileID: 0}
+  item: {fileID: 11400000, guid: 2a4dcd437b44fc14aaea5ff1e2e88b10, type: 2}

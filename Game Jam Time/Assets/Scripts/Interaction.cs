@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -27,13 +28,14 @@ public class Interaction : MonoBehaviour
     private void LateUpdate()
     {
         if (Input.GetKeyDown(KeyCode.E) && CurrentNearItem != null)
-        {
+        {       
                 inventory.AddItem(CurrentNearItem.item, 1);
                 Destroy(CurrentNearItem.transform.gameObject);
 
                 if (hands.heldItem == null)
                 {
                     hands.heldItem = Instantiate(CurrentNearItem.item.prefab, handHolder.transform.position, handHolder.transform.rotation, handHolder.transform);
+                    hands.weaponType = CurrentNearItem.item;
                 }
 
                 Destroy(CurrentNearItem.grabUI);

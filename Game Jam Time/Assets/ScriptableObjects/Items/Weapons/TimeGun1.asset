@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c79642b0130e4ee4fa12a5ecf23e2c34, type: 3}
+  m_Name: TimeGun1
+  m_EditorClassIdentifier: 
+  sprite: {fileID: 0}
+  prefab: {fileID: 5589434769530864689, guid: 5eaaeca9f642d1044b6a4781f914ff38, type: 3}
+  type: 2
+  description: TimeGun tier1.
+  bullet: {fileID: 3969645282307900678, guid: 212c9f9d3fbf8ef49b478eb269a528a1, type: 3}
+  cooldown: 3

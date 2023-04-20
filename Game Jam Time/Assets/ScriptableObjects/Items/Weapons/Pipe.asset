@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b736ef5a10d6e04cbe9a120dfd51da5, type: 3}
-  m_Name: Weapon tier3
+  m_Name: Pipe
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  prefab: {fileID: 7628632088655421879, guid: 9b628fcb28e54de4e9bc2fb7b836d24b, type: 3}
+  prefab: {fileID: 5617386202402400354, guid: 5820388c95c08674e8038d20e1eaeb9b, type: 3}
   type: 1
-  description: This is weapon tier 3.
-  damage: 3
+  description: This is weapon tier 1.
+  damage: 1

@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b736ef5a10d6e04cbe9a120dfd51da5, type: 3}
-  m_Name: Weapon tier2
+  m_Script: {fileID: 11500000, guid: c79642b0130e4ee4fa12a5ecf23e2c34, type: 3}
+  m_Name: TimeGun2
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
   prefab: {fileID: 1395391959112390743, guid: 3c6702a2ca9d0e348800a3356b4943fd, type: 3}
-  type: 1
-  description: This is weapon tier 2.
-  damage: 2
+  type: 2
+  description: TimeGun tier2.
+  bullet: {fileID: 396178526775425467, guid: b70a57ac1d2035243ad93767ae5ad132, type: 3}
+  cooldown: 3

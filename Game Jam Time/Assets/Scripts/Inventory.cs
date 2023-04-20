@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
     [HideInInspector] public Hands hands;
     [HideInInspector] public Transform handHolder;
 
-    private int heldItemIndex = 0;
+    public int heldItemIndex = 0;
 
     public List<InventorySlot> Container = new List<InventorySlot>();
     private void Awake()
@@ -32,6 +32,8 @@ public class Inventory : MonoBehaviour
 
             Destroy(hands.heldItem.gameObject);
             hands.heldItem = Instantiate(Container.ElementAt(heldItemIndex).item.prefab, handHolder.transform.position, handHolder.transform.rotation, handHolder.transform);
+            hands.weaponType = Container.ElementAt(heldItemIndex).item;
+            if (heldItemIndex  == inventory.Container.Count) { hands.heldItem = null; hands.weaponType = null; }
         }
     }
 }
