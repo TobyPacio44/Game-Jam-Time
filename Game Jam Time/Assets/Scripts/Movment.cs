@@ -14,6 +14,7 @@ public class Movment : MonoBehaviour
 
     [HideInInspector] public Transform orientation;
     [HideInInspector] public GameObject groundCheck;
+    [HideInInspector] public float IsStanding;
     private Rigidbody rb;
 
     public CapsuleCollider capsuleCollider;
@@ -29,6 +30,7 @@ public class Movment : MonoBehaviour
 
     public Animator LegsAnimator;
     public ParticleSystem JumpInpact;
+  
     void Start()
     {
         capsuleCollider =  GetComponent<CapsuleCollider>();
@@ -90,11 +92,12 @@ public class Movment : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(movement);
             orientation.rotation = Quaternion.Slerp(orientation.rotation, targetRotation, Time.deltaTime * 10f);
             LegsAnimator.SetBool("Walk", true);
-            
+            IsStanding = movement.magnitude + 0.1f;
         }
         else
         {
             LegsAnimator.SetBool("Walk", false);
+            IsStanding = movement.magnitude + 0.35f;
         }
     }
 }
